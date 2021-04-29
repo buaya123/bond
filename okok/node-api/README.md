@@ -38,5 +38,32 @@ Navigate to the okok directory and run the following commands to setup the serve
     }
 ]
 ```
+## 2- Send Invite
+- Endpoint ``https://bond-api.vercel.app/sendInvite/:email``
+- Method: `POST`
+- Data: JSON (Send in Params*): 
+```
+{
+"email": "email of recipient"
+}
+```
+### RESPONSE
+#### In case they already have an account in db
+```
+[
+    {
+        "data": "0"
+    }
+]
+```
+#### In case it's their first time
+```
+[
+    {
+        "data": "1"
+    }
+]
+```
+
 
 
